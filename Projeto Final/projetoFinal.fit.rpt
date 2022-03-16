@@ -1,0 +1,544 @@
+Fitter report for projetoFinal
+Tue Dec 06 22:48:07 2016
+Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Bidir Pins
+  9. All Package Pins
+ 10. I/O Standard
+ 11. Dedicated Inputs I/O
+ 12. Output Pin Default Load For Reported TCO
+ 13. Fitter Resource Utilization by Entity
+ 14. Control Signals
+ 15. Global & Other Fast Signals
+ 16. Non-Global High Fan-Out Signals
+ 17. Interconnect Usage Summary
+ 18. LAB Macrocells
+ 19. Parallel Expander
+ 20. Shareable Expander
+ 21. Logic Cell Interconnection
+ 22. Fitter Device Options
+ 23. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------+
+; Fitter Summary                                                            ;
++---------------------------+-----------------------------------------------+
+; Fitter Status             ; Successful - Tue Dec 06 22:48:07 2016         ;
+; Quartus II 32-bit Version ; 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition ;
+; Revision Name             ; projetoFinal                                  ;
+; Top-level Entity Name     ; projetofinal                                  ;
+; Family                    ; MAX3000A                                      ;
+; Device                    ; EPM3064ALC44-10                               ;
+; Timing Models             ; Final                                         ;
+; Total macrocells          ; 57 / 64 ( 89 % )                              ;
+; Total pins                ; 24 / 34 ( 71 % )                              ;
++---------------------------+-----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                              ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                     ; Setting         ; Default Value ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Device                                                                     ; EPM3064ALC44-10 ;               ;
+; Use smart compilation                                                      ; Off             ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On              ; On            ;
+; Enable compact report table                                                ; Off             ; Off           ;
+; Optimize Timing for ECOs                                                   ; Off             ; Off           ;
+; Regenerate full fit report during ECO compiles                             ; Off             ; Off           ;
+; Optimize IOC Register Placement for Timing                                 ; Normal          ; Normal        ;
+; Limit to One Fitting Attempt                                               ; Off             ; Off           ;
+; Fitter Initial Placement Seed                                              ; 1               ; 1             ;
+; Slow Slew Rate                                                             ; Off             ; Off           ;
+; Fitter Effort                                                              ; Auto Fit        ; Auto Fit      ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off             ; Off           ;
++----------------------------------------------------------------------------+-----------------+---------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in C:/Users/Carol/Desktop/Projeto Final/projetoFinal.pin.
+
+
++------------------------------------------------------+
+; Fitter Resource Usage Summary                        ;
++-----------------------------------+------------------+
+; Resource                          ; Usage            ;
++-----------------------------------+------------------+
+; Logic cells                       ; 57 / 64 ( 89 % ) ;
+; Registers                         ; 28 / 64 ( 44 % ) ;
+; Number of pterms used             ; 220              ;
+; User inserted logic elements      ; 0                ;
+; I/O pins                          ; 24 / 34 ( 71 % ) ;
+;     -- Clock pins                 ; 2 / 2 ( 100 % )  ;
+;     -- Dedicated input pins       ; 0 / 2 ( 0 % )    ;
+; Global signals                    ; 1                ;
+; Shareable expanders               ; 23 / 64 ( 36 % ) ;
+; Parallel expanders                ; 9 / 60 ( 15 % )  ;
+; Cells using turbo bit             ; 57 / 64 ( 89 % ) ;
+; Maximum fan-out node              ; clk              ;
+; Maximum fan-out                   ; 28               ;
+; Highest non-global fan-out signal ; sum[2]           ;
+; Highest non-global fan-out        ; 25               ;
+; Total fan-out                     ; 600              ;
+; Average fan-out                   ; 5.77             ;
++-----------------------------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                    ;
++----------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
+; Name     ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; I/O Standard ; Location assigned by ;
++----------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
+; clk      ; 43    ; --       ; --  ; 28                    ; 0                  ; yes    ; 3.3-V LVTTL  ; Fitter               ;
+; confirma ; 25    ; --       ; 3   ; 10                    ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; m1       ; 31    ; --       ; 3   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; m2       ; 5     ; --       ; 1   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; m3       ; 28    ; --       ; 3   ; 9                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; m4       ; 27    ; --       ; 3   ; 9                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; m5       ; 18    ; --       ; 2   ; 9                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; sel1     ; 16    ; --       ; 2   ; 13                    ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; sel2     ; 26    ; --       ; 3   ; 14                    ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; sel3     ; 2     ; --       ; --  ; 12                    ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; sel4     ; 29    ; --       ; 3   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
++----------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Bidir Pins                                                                                                                                                                                                                       ;
++--------+-------+----------+-----+-----------------------+--------------------+--------+-----------------+----------------+------------+--------------+----------------------+-------+----------------------+---------------------+
+; Name   ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Output Register ; Slow Slew Rate ; Open Drain ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++--------+-------+----------+-----+-----------------------+--------------------+--------+-----------------+----------------+------------+--------------+----------------------+-------+----------------------+---------------------+
+; refri1 ; 14    ; --       ; 2   ; 0                     ; 0                  ; no     ; no              ; no             ; no         ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; refri2 ; 39    ; --       ; 4   ; 0                     ; 0                  ; no     ; no              ; no             ; no         ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; refri3 ; 40    ; --       ; 4   ; 0                     ; 0                  ; no     ; no              ; no             ; no         ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; refri4 ; 33    ; --       ; 4   ; 0                     ; 0                  ; no     ; no              ; no             ; no         ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; sum10  ; 37    ; --       ; 4   ; 0                     ; 0                  ; no     ; no              ; no             ; no         ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; sum100 ; 6     ; --       ; 1   ; 0                     ; 0                  ; no     ; no              ; no             ; no         ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; sum25  ; 4     ; --       ; 1   ; 0                     ; 0                  ; no     ; no              ; no             ; no         ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; sum5   ; 41    ; --       ; 4   ; 0                     ; 0                  ; no     ; no              ; no             ; no         ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; sum50  ; 34    ; --       ; 4   ; 0                     ; 0                  ; no     ; no              ; no             ; no         ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
++--------+-------+----------+-----+-----------------------+--------------------+--------+-----------------+----------------+------------+--------------+----------------------+-------+----------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ; 0          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 2        ; 1          ; --       ; sel3           ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 3        ; 2          ; --       ; VCCINT         ; power  ;              ; 3.3V    ;                 ;
+; 4        ; 3          ; --       ; sum25          ; bidir  ; 3.3-V LVTTL  ;         ; N               ;
+; 5        ; 4          ; --       ; m2             ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 6        ; 5          ; --       ; sum100         ; bidir  ; 3.3-V LVTTL  ;         ; N               ;
+; 7        ; 6          ; --       ; TDI            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 8        ; 7          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 9        ; 8          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 10       ; 9          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 11       ; 10         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 12       ; 11         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 13       ; 12         ; --       ; TMS            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 14       ; 13         ; --       ; refri1         ; bidir  ; 3.3-V LVTTL  ;         ; N               ;
+; 15       ; 14         ; --       ; VCCIO          ; power  ;              ; 3.3V    ;                 ;
+; 16       ; 15         ; --       ; sel1           ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 17       ; 16         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 18       ; 17         ; --       ; m5             ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 19       ; 18         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 20       ; 19         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 21       ; 20         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 22       ; 21         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 23       ; 22         ; --       ; VCCINT         ; power  ;              ; 3.3V    ;                 ;
+; 24       ; 23         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 25       ; 24         ; --       ; confirma       ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 26       ; 25         ; --       ; sel2           ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 27       ; 26         ; --       ; m4             ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 28       ; 27         ; --       ; m3             ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 29       ; 28         ; --       ; sel4           ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 30       ; 29         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 31       ; 30         ; --       ; m1             ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 32       ; 31         ; --       ; TCK            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 33       ; 32         ; --       ; refri4         ; bidir  ; 3.3-V LVTTL  ;         ; N               ;
+; 34       ; 33         ; --       ; sum50          ; bidir  ; 3.3-V LVTTL  ;         ; N               ;
+; 35       ; 34         ; --       ; VCCIO          ; power  ;              ; 3.3V    ;                 ;
+; 36       ; 35         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 37       ; 36         ; --       ; sum10          ; bidir  ; 3.3-V LVTTL  ;         ; N               ;
+; 38       ; 37         ; --       ; TDO            ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 39       ; 38         ; --       ; refri2         ; bidir  ; 3.3-V LVTTL  ;         ; N               ;
+; 40       ; 39         ; --       ; refri3         ; bidir  ; 3.3-V LVTTL  ;         ; N               ;
+; 41       ; 40         ; --       ; sum5           ; bidir  ; 3.3-V LVTTL  ;         ; N               ;
+; 42       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 43       ; 42         ; --       ; clk            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 44       ; 43         ; --       ; GND+           ;        ;              ;         ;                 ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++--------------------------------------------------------------------------------------------------+
+; I/O Standard                                                                                     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; I/O Standard ; Input Vref ; Dedicated Input Pins ; Pins in I/O Bank1 ; Pins in I/O Bank2 ; Total ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; 3.3-V LVTTL  ; -          ; 2                    ; 0                 ; 0                 ; 2     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+
+
++--------------------------------------------------------------------+
+; Dedicated Inputs I/O                                               ;
++------+-------+-------+-------+--------------+------------+---------+
+; Name ; Pin # ; Type  ; VCCIO ; I/O Standard ; Input Vref ; Current ;
++------+-------+-------+-------+--------------+------------+---------+
+; clk  ; 43    ; Input ; --    ; 3.3-V LVTTL  ; -          ; 0 mA    ;
+; sel3 ; 2     ; Input ; --    ; 3.3-V LVTTL  ; -          ; 0 mA    ;
++------+-------+-------+-------+--------------+------------+---------+
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; 3.3-V LVTTL  ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS ; 10 pF ; Not Available          ;
+; 3.3-V PCI    ; 10 pF ; 25 Ohm (Parallel)      ;
+; 2.5 V        ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                           ;
++----------------------------+------------+------+-------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name                             ; Library Name ;
++----------------------------+------------+------+-------------------------------------------------+--------------+
+; |projetofinal              ; 57         ; 24   ; |projetofinal                                   ; work         ;
+;    |lpm_add_sub:Add0|      ; 4          ; 0    ; |projetofinal|lpm_add_sub:Add0                  ; work         ;
+;       |addcore:adder[0]|   ; 4          ; 0    ; |projetofinal|lpm_add_sub:Add0|addcore:adder[0] ; work         ;
++----------------------------+------------+------+-------------------------------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                  ;
++-----------+----------+---------+--------------+--------+----------------------+------------------+
+; Name      ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ;
++-----------+----------+---------+--------------+--------+----------------------+------------------+
+; clk       ; PIN_43   ; 28      ; Clock        ; yes    ; On                   ; --               ;
+; sum~209   ; LC9      ; 8       ; Clock enable ; no     ; --                   ; --               ;
+; valor~112 ; SEXP23   ; 12      ; Clock enable ; no     ; --                   ; --               ;
+; valor~113 ; SEXP24   ; 13      ; Clock enable ; no     ; --                   ; --               ;
+; valor~77  ; SEXP20   ; 13      ; Clock enable ; no     ; --                   ; --               ;
+; valor~78  ; SEXP19   ; 12      ; Clock enable ; no     ; --                   ; --               ;
+; valor~87  ; SEXP18   ; 12      ; Clock enable ; no     ; --                   ; --               ;
++-----------+----------+---------+--------------+--------+----------------------+------------------+
+
+
++---------------------------------------------------------------------+
+; Global & Other Fast Signals                                         ;
++------+----------+---------+----------------------+------------------+
+; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
++------+----------+---------+----------------------+------------------+
+; clk  ; PIN_43   ; 28      ; On                   ; --               ;
++------+----------+---------+----------------------+------------------+
+
+
++-----------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                 ;
++-------------------------------------------------------+---------+
+; Name                                                  ; Fan-Out ;
++-------------------------------------------------------+---------+
+; sum[2]                                                ; 25      ;
+; sum[6]                                                ; 23      ;
+; sum[4]                                                ; 23      ;
+; sum[3]                                                ; 23      ;
+; sum[7]                                                ; 22      ;
+; sum[1]                                                ; 19      ;
+; moeda                                                 ; 18      ;
+; sum[5]                                                ; 17      ;
+; sel2                                                  ; 14      ;
+; valor~113                                             ; 13      ;
+; sel1                                                  ; 13      ;
+; refri1~reg0                                           ; 13      ;
+; refri4~reg0                                           ; 13      ;
+; valor~77                                              ; 13      ;
+; valor~112                                             ; 12      ;
+; sel3                                                  ; 12      ;
+; sum[0]                                                ; 12      ;
+; refri3~reg0                                           ; 12      ;
+; refri2~reg0                                           ; 12      ;
+; valor~87                                              ; 12      ;
+; valor~78                                              ; 12      ;
+; confirma                                              ; 10      ;
+; m5                                                    ; 9       ;
+; m4                                                    ; 9       ;
+; m3                                                    ; 9       ;
+; sel4                                                  ; 8       ;
+; m2                                                    ; 8       ;
+; m1                                                    ; 8       ;
+; sum~209                                               ; 8       ;
+; sig_m5                                                ; 8       ;
+; sig_m4                                                ; 8       ;
+; sig_m3                                                ; 8       ;
+; valor[0]                                              ; 7       ;
+; sig_m2                                                ; 7       ;
+; sig_m1                                                ; 7       ;
+; valor[1]                                              ; 6       ;
+; valor[2]                                              ; 6       ;
+; valor[4]                                              ; 6       ;
+; valor~80                                              ; 6       ;
+; sum5~reg0                                             ; 5       ;
+; sum50~reg0                                            ; 5       ;
+; sum25~reg0                                            ; 5       ;
+; sum5~48                                               ; 5       ;
+; valor~116                                             ; 4       ;
+; lpm_add_sub:Add0|addcore:adder[0]|g4~27               ; 4       ;
+; refri1~34                                             ; 4       ;
+; sum100~reg0                                           ; 4       ;
+; valor[3]                                              ; 4       ;
+; valor~79                                              ; 4       ;
+; sum10~reg0                                            ; 4       ;
+; valor~115                                             ; 3       ;
+; valor~114                                             ; 3       ;
+; lpm_add_sub:Add0|addcore:adder[0]|ps[4]~13sexp        ; 3       ;
+; sum5~53                                               ; 3       ;
+; refri1~68                                             ; 2       ;
+; lpm_add_sub:Add0|addcore:adder[0]|gc[2]~3             ; 2       ;
+; lpm_add_sub:Add0|addcore:adder[0]|gc[2]~2             ; 2       ;
+; sum25~38                                              ; 2       ;
+; sum5~40                                               ; 2       ;
+; refri1~64                                             ; 1       ;
+; refri1~61                                             ; 1       ;
+; sum5~83                                               ; 1       ;
+; sum~258                                               ; 1       ;
+; sum5~80                                               ; 1       ;
+; sum~248                                               ; 1       ;
+; refri1~54                                             ; 1       ;
+; sum5~68                                               ; 1       ;
+; sum5~65                                               ; 1       ;
+; lpm_add_sub:Add0|addcore:adder[0]|g4~20               ; 1       ;
+; lpm_add_sub:Add0|addcore:adder[0]|gc[2]~7             ; 1       ;
+; lpm_add_sub:Add0|addcore:adder[0]|g3~2                ; 1       ;
+; lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~5 ; 1       ;
+; lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~4 ; 1       ;
+; lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~3 ; 1       ;
+; sum~210                                               ; 1       ;
+; refri3~38                                             ; 1       ;
+; refri3~34                                             ; 1       ;
+; refri3~32                                             ; 1       ;
+; process_0~60                                          ; 1       ;
+; refri1~53                                             ; 1       ;
+; refri2~36                                             ; 1       ;
+; process_0~53                                          ; 1       ;
+; refri1~41                                             ; 1       ;
+; process_0~50                                          ; 1       ;
+; refri1~33                                             ; 1       ;
+; sum5~59                                               ; 1       ;
+; process_0~44                                          ; 1       ;
+; sum100~41                                             ; 1       ;
+; sum5~42                                               ; 1       ;
+; sum5~41                                               ; 1       ;
++-------------------------------------------------------+---------+
+
+
++-------------------------------------------------+
+; Interconnect Usage Summary                      ;
++----------------------------+--------------------+
+; Interconnect Resource Type ; Usage              ;
++----------------------------+--------------------+
+; Output enables             ; 0 / 6 ( 0 % )      ;
+; PIA buffers                ; 109 / 144 ( 76 % ) ;
++----------------------------+--------------------+
+
+
++-----------------------------------------------------------------------+
+; LAB Macrocells                                                        ;
++-----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 14.25) ; Number of LABs  (Total = 4) ;
++-----------------------------------------+-----------------------------+
+; 0                                       ; 0                           ;
+; 1                                       ; 0                           ;
+; 2                                       ; 0                           ;
+; 3                                       ; 0                           ;
+; 4                                       ; 0                           ;
+; 5                                       ; 0                           ;
+; 6                                       ; 0                           ;
+; 7                                       ; 0                           ;
+; 8                                       ; 0                           ;
+; 9                                       ; 0                           ;
+; 10                                      ; 0                           ;
+; 11                                      ; 0                           ;
+; 12                                      ; 1                           ;
+; 13                                      ; 1                           ;
+; 14                                      ; 0                           ;
+; 15                                      ; 0                           ;
+; 16                                      ; 2                           ;
++-----------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------+
+; Parallel Expander                                       ;
++--------------------------+------------------------------+
+; Parallel Expander Length ; Number of Parallel Expanders ;
++--------------------------+------------------------------+
+; 0                        ; 0                            ;
+; 1                        ; 2                            ;
+; 2                        ; 2                            ;
+; 3                        ; 1                            ;
++--------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Shareable Expander                                                            ;
++-------------------------------------------------+-----------------------------+
+; Number of shareable expanders  (Average = 5.75) ; Number of LABs  (Total = 4) ;
++-------------------------------------------------+-----------------------------+
+; 0                                               ; 0                           ;
+; 1                                               ; 0                           ;
+; 2                                               ; 0                           ;
+; 3                                               ; 0                           ;
+; 4                                               ; 0                           ;
+; 5                                               ; 2                           ;
+; 6                                               ; 1                           ;
+; 7                                               ; 1                           ;
++-------------------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
++-----+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                                                                                                                      ; Output                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++-----+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC5        ; sel3, sel2, sel1, moeda, sum[5], sum[6], sum[7], sum[4]                                                                                                                                                    ; sum5~59                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
+;  A  ; LC4        ; sum5~65, sum5~40, sum[5], sum[6], sum[7], sum[2], sum[3], moeda, refri3~reg0, refri1~reg0, refri4~reg0, refri2~reg0, sel2, sum[4], sel1, sel3                                                              ; sum10~reg0, sum25~reg0, sum50~reg0, sum100~reg0, sum5~reg0                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  A  ; LC12       ; sel1, moeda, sum[4], sum[5], sum[6], sum[7], sum[2], sum[3]                                                                                                                                                ; refri2~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC16       ; clk, sig_m3, m3, sum25~38, sum25~reg0, sum5~48, sum5~53                                                                                                                                                    ; sum5~40, sum25~reg0, sum25, sum5~65, sum5~80                                                                                                                                                                                                                                                                                                                                                                                                                      ;
+;  A  ; LC14       ; refri1~68, sel4, confirma, sum[1], sum[2], sum[3], sum[6], sum[7], refri3~34                                                                                                                               ; refri3~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC10       ; sel2, sel1, moeda, sum[6], sum[7], sum[5], sum[4], sum[2], sum[3], sum[1]                                                                                                                                  ; refri3~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC11       ; clk, sig_m5, m5, sum100~41, sum5~48, sum100~reg0                                                                                                                                                           ; sum5~40, sum100~reg0, sum100, sum5~80                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC6        ; sum5~68, sum[5], sum[6], sum[7], sum[2], sum[3], moeda, sum[0], sel2, sum[4], sel1, sum[1]                                                                                                                 ; refri4~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC9        ; sum~248, refri1~68, sum[0], sel2, sel1, sum[1], sum[4], sum[6], sum[7], confirma, sum[2], sum[3], sum[5], sum5~41, sum5~42                                                                                 ; sum[0], sum[1], sum[2], sum[3], sum[4], sum[5], sum[6], sum[7]                                                                                                                                                                                                                                                                                                                                                                                                    ;
+;  A  ; LC15       ; sum[6], sel3, sum[7], sum[4], sum[5], sum[1], sum[3], sum[2], sum[0]                                                                                                                                       ; refri3~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC13       ; sum[2], sum[4], sel1, sum[3], sum[5], sum[6], sum[7]                                                                                                                                                       ; refri1~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC3        ; sum5~80, sel3, sel2, sel1, moeda, refri3~reg0, refri1~reg0, refri4~reg0, refri2~reg0, sum[6], sum[7], sum[2], sum[1], sum[3], sum25~reg0, sum5~40, sum[4], sum[0], sum[5], sum5~reg0                       ; sum5~48                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
+;  A  ; LC8        ; sum~258, moeda, refri3~reg0, sel4, sel3, sel2, sel1, confirma, sum[1], sum[2], sum[3], sum[6], sum[7], refri1~reg0, refri4~reg0                                                                            ; sum~209                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
+;  A  ; LC2        ; sum5~83, sum5~reg0, sel3, sel2, sel4, sel1, moeda, refri3~reg0, refri1~reg0, refri4~reg0, refri2~reg0, sum50~reg0, sum[6], sum[7], sum[2], sum[1], sum[3], sum100~reg0, sum25~reg0                         ; sum5~65                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
+;  A  ; LC7        ; refri2~reg0, sel4, sel3, sel2, sel1, confirma, refri1~reg0, sum[1], sum[2], sum[3], sum[6], sum[7], refri4~reg0                                                                                            ; sum~248                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
+;  A  ; LC1        ; sum[3], sel2, sum[6], sum[7], sel1, moeda, refri3~reg0, refri1~reg0, refri4~reg0, refri2~reg0, sum[2], sum50~reg0, sel3, sel4, sum10~reg0, sum[1]                                                          ; sum5~80                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
+;  B  ; LC19       ; clk, sig_m1, m1, valor~77, sig_m3, m3, valor~87, valor~78, valor[0]                                                                                                                                        ; valor[0], sum[0], sum~210, sum[1], lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~5, lpm_add_sub:Add0|addcore:adder[0]|gc[2]~7, lpm_add_sub:Add0|addcore:adder[0]|g4~27                                                                                                                                                                                                                                                                                      ;
+;  B  ; LC27       ; clk, moeda, valor[4], sum[4], lpm_add_sub:Add0|addcore:adder[0]|g4~27, sum~209, valor~87, valor~78, valor~112, valor~113, valor~77                                                                         ; sum5~42, sum5~48, process_0~44, sum5~59, process_0~50, refri1~41, process_0~53, refri2~36, refri1~53, process_0~60, refri3~32, refri3~34, sum~209, sum[4], sum[5], sum[6], sum[7], sum5~68, lpm_add_sub:Add0|addcore:adder[0]|ps[4]~13sexp, refri1~54, refri1~61, refri1~64, sum5~65                                                                                                                                                                              ;
+;  B  ; LC31       ; clk, moeda, lpm_add_sub:Add0|addcore:adder[0]|g3~2, lpm_add_sub:Add0|addcore:adder[0]|gc[2]~7, sum~209, valor~87, valor~78, valor~112, valor~113, valor~77                                                 ; sum5~41, sum5~48, process_0~44, sum5~59, process_0~50, refri1~41, process_0~53, refri2~36, refri1~53, process_0~60, refri3~32, refri3~38, sum~209, lpm_add_sub:Add0|addcore:adder[0]|g3~2, lpm_add_sub:Add0|addcore:adder[0]|g4~20, lpm_add_sub:Add0|addcore:adder[0]|g4~27, sum5~65, sum~248, sum5~80, sum~258, sum5~83, refri1~54, refri1~64                                                                                                                    ;
+;  B  ; LC21       ; clk, moeda, lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~5, sum~209, valor~87, valor~78, valor~112, valor~113, valor~77                                                                             ; sum5~41, sum5~48, process_0~44, sum5~59, process_0~50, refri1~41, process_0~53, refri2~36, refri1~53, process_0~60, refri3~32, refri3~38, sum~209, lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~3, lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~4, lpm_add_sub:Add0|addcore:adder[0]|gc[2]~2, lpm_add_sub:Add0|addcore:adder[0]|gc[2]~7, lpm_add_sub:Add0|addcore:adder[0]|g4~27, sum5~65, sum~248, sum5~80, sum~258, sum5~83, refri1~61, refri1~64 ;
+;  B  ; LC29       ; clk, sum[0], moeda, valor[0], valor[1], sum[1], sum~210, sum~209, valor~87, valor~78, valor~112, valor~113, valor~77                                                                                       ; process_0~44, sum5~59, refri1~41, process_0~53, refri1~53, process_0~60, refri3~32, refri3~38, sum~209, sum[1], lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~5, lpm_add_sub:Add0|addcore:adder[0]|gc[2]~3, lpm_add_sub:Add0|addcore:adder[0]|gc[2]~7, lpm_add_sub:Add0|addcore:adder[0]|g4~27, sum5~65, sum~248, sum5~80, sum~258, sum5~83                                                                                                                 ;
+;  B  ; LC25       ; clk, valor~112, valor~113, valor~77, sig_m4, m4, valor~78, valor[3]                                                                                                                                        ; valor[3], lpm_add_sub:Add0|addcore:adder[0]|g3~2, lpm_add_sub:Add0|addcore:adder[0]|g4~20, lpm_add_sub:Add0|addcore:adder[0]|g4~27                                                                                                                                                                                                                                                                                                                                ;
+;  B  ; LC26       ; clk, moeda, sum[0], valor[0], sum~209, valor~87, valor~78, valor~112, valor~113, valor~77                                                                                                                  ; sum5~59, refri1~41, refri1~53, process_0~60, sum[0], sum~209, sum~210, sum[1], lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~5, lpm_add_sub:Add0|addcore:adder[0]|gc[2]~7, lpm_add_sub:Add0|addcore:adder[0]|g4~27, sum5~65                                                                                                                                                                                                                                 ;
+;  B  ; LC17       ; clk, sig_m5, m5, sig_m4, m4, sig_m3, m3, sig_m1, m1, sig_m2, m2                                                                                                                                            ; sum5~48, sum5~59, refri1~reg0, refri2~36, refri3~32, sum[0], sum[1], sum[2], sum[3], sum[4], sum[5], sum[6], sum[7], sum5~65, sum5~68, sum~248, sum5~80, sum5~83                                                                                                                                                                                                                                                                                                  ;
+;  B  ; LC23       ; clk, valor~87, valor~112, valor~113, valor~77, sig_m5, m5, valor[4]                                                                                                                                        ; valor[4], sum[4], sum[5], sum[6], sum[7], lpm_add_sub:Add0|addcore:adder[0]|ps[4]~13sexp                                                                                                                                                                                                                                                                                                                                                                          ;
+;  B  ; LC18       ; clk, valor~113, valor~77, sig_m3, m3, valor~87, sig_m5, m5, valor[2]                                                                                                                                       ; valor[2], lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~3, lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~4, lpm_add_sub:Add0|addcore:adder[0]|gc[2]~2, lpm_add_sub:Add0|addcore:adder[0]|gc[2]~7, lpm_add_sub:Add0|addcore:adder[0]|g4~27                                                                                                                                                                                                             ;
+;  B  ; LC20       ; clk, valor~113, sig_m2, m2, valor~112, sig_m4, m4, valor~78, valor[1]                                                                                                                                      ; valor[1], sum[1], lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~5, lpm_add_sub:Add0|addcore:adder[0]|gc[2]~3, lpm_add_sub:Add0|addcore:adder[0]|gc[2]~7, lpm_add_sub:Add0|addcore:adder[0]|g4~27                                                                                                                                                                                                                                                            ;
+;  B  ; LC24       ; sig_m4, m4, sig_m3, m3, sig_m1, m1, sig_m2, m2                                                                                                                                                             ; sum100~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC30       ; clk, process_0~50, moeda, refri1~reg0, refri1~41, valor~87, valor~78, valor~112, valor~113, valor~77                                                                                                       ; sum5~48, refri1~33, refri1~reg0, refri1~34, refri1, sum5~65, sum5~80, refri1~54, sum~248, sum~258, sum5~83, refri1~61, refri1~68                                                                                                                                                                                                                                                                                                                                  ;
+;  B  ; LC28       ; clk, sum[4], valor[4], moeda, lpm_add_sub:Add0|addcore:adder[0]|g4~27, sum[5], sum~209, lpm_add_sub:Add0|addcore:adder[0]|ps[4]~13sexp, valor~87, valor~78, valor~112, valor~113, valor~77                 ; sum5~48, process_0~44, sum5~59, process_0~50, refri1~41, process_0~53, refri2~36, refri1~53, process_0~60, refri3~32, refri3~34, sum~209, sum[5], sum[6], sum[7], sum5~68, sum5~65                                                                                                                                                                                                                                                                                ;
+;  B  ; LC32       ; clk, moeda, sum[4], valor[4], sum[5], lpm_add_sub:Add0|addcore:adder[0]|g4~27, sum[6], sum~209, lpm_add_sub:Add0|addcore:adder[0]|ps[4]~13sexp, valor~87, valor~78, valor~112, valor~113, valor~77         ; sum5~48, process_0~44, sum5~59, process_0~50, refri1~41, process_0~53, refri2~36, refri1~53, process_0~60, refri3~32, refri3~38, sum~209, sum[6], sum[7], sum5~65, sum5~68, sum~248, sum5~80, sum~258, sum5~83, refri1~54, refri1~61, refri1~64                                                                                                                                                                                                                   ;
+;  B  ; LC22       ; clk, moeda, sum[4], valor[4], sum[6], sum[5], lpm_add_sub:Add0|addcore:adder[0]|g4~27, sum[7], sum~209, lpm_add_sub:Add0|addcore:adder[0]|ps[4]~13sexp, valor~87, valor~78, valor~112, valor~113, valor~77 ; sum5~48, process_0~44, sum5~59, process_0~50, refri1~41, process_0~53, refri2~36, refri1~53, process_0~60, refri3~32, refri3~38, sum~209, sum[7], sum5~65, sum5~68, sum~248, sum5~80, sum~258, sum5~83, refri1~54, refri1~61, refri1~64                                                                                                                                                                                                                           ;
+;  C  ; LC44       ; sum[2], valor[2], lpm_add_sub:Add0|addcore:adder[0]|gc[2]~2, sum[1], valor[1], lpm_add_sub:Add0|addcore:adder[0]|gc[2]~3, sum[0], valor[0]                                                                 ; sum[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  C  ; LC45       ; refri3~reg0, confirma, refri1~reg0, refri4~reg0, refri2~reg0                                                                                                                                               ; refri4~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC39       ; sum[1], sum[5], sum[4], sel4, sum[2], sum[3], sum[6], sum[7]                                                                                                                                               ; refri4~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC42       ; refri1~54, refri1~34, sel2, sel3, sum[6], sum[7], sum[1], sum[2], sum[3], confirma, sum[0], sum[4], sum[5]                                                                                                 ; refri1~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC43       ; sum[4], sum[1], sum[2], sum[6], sum[7], sum[3], sum[5], sel2                                                                                                                                               ; refri2~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC41       ; refri1~61, refri3~reg0, sel2, sel4, sel3, confirma, refri1~reg0, refri4~reg0, refri2~reg0, sum[3], refri1~34, sum[6], sum[7], sum[4]                                                                       ; refri1~41                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC35       ; valor[3], sum[3], lpm_add_sub:Add0|addcore:adder[0]|g4~20, sum[2], valor[2], lpm_add_sub:Add0|addcore:adder[0]|gc[2]~2, sum[1], valor[1], lpm_add_sub:Add0|addcore:adder[0]|gc[2]~3, sum[0], valor[0]      ; sum[4], sum[5], sum[6], sum[7]                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
+;  C  ; LC34       ; refri1~64, refri1~34, sel3, sel4, confirma, sum[1], sum[3], sum[6], sum[7], sum[2], sum[5], sum[0], sum[4]                                                                                                 ; refri2~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC36       ; sum[1], valor[1], sum[0], valor[0], lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~3, lpm_add_sub:Add0|addcore:adder[0]|unreg_res_node[2]~4                                                           ; sum[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  C  ; LC37       ; sum[3], valor[3]                                                                                                                                                                                           ; sum[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  C  ; LC40       ; sum[2], refri3~reg0, sel2, sum[6], sum[7], sum[4], confirma, refri1~reg0, refri4~reg0, refri2~reg0                                                                                                         ; refri1~54                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC33       ; sum[3], refri1~34, sum[6], sum[7], sum[4], confirma, sum[2]                                                                                                                                                ; refri1~53                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC62       ; clk, process_0~60, refri3~32, refri3~reg0, refri3~38, valor~114, valor~115, valor~80, valor~79, valor~116                                                                                                  ; sum5~48, refri1~33, refri1~34, refri3~reg0, refri3, sum5~65, sum5~80, refri1~54, sum~248, sum5~83, refri1~61, refri1~68                                                                                                                                                                                                                                                                                                                                           ;
+;  D  ; LC63       ; sig_m1, sig_m2, m2, m1                                                                                                                                                                                     ; sum25~reg0, sum50~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  D  ; LC57       ; clk, process_0~53, refri2~36, refri2~reg0, refri1~53, valor~114, valor~115, valor~80, valor~79, valor~116                                                                                                  ; sum5~48, refri1~33, refri1~34, refri2~reg0, refri2, sum5~65, sum5~80, refri1~54, sum~258, sum5~83, refri1~61, refri1~68                                                                                                                                                                                                                                                                                                                                           ;
+;  D  ; LC64       ; clk, sig_m1, m1, sum5~reg0, sum5~48, sum5~53, valor~80, valor~116                                                                                                                                          ; sum5~40, sum5~reg0, sum5, sum5~80, sum5~65                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  D  ; LC55       ; sig_m4, sig_m5, m5, m4                                                                                                                                                                                     ; sum10~reg0, sum25~reg0, sum5~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
+;  D  ; LC56       ; clk, m1                                                                                                                                                                                                    ; valor~79, sum25~38, moeda, valor[0], sum100~41, sum5~reg0, valor~113                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  D  ; LC49       ; clk, process_0~44, sum5~59, refri4~reg0, refri1~33, valor~114, valor~115, valor~80, valor~79, valor~116                                                                                                    ; sum5~48, refri4~reg0, refri1~33, refri1~34, refri4, sum5~65, sum5~80, refri1~54, sum~248, sum~258, sum5~83, refri1~61, refri1~68                                                                                                                                                                                                                                                                                                                                  ;
+;  D  ; LC50       ; clk, m5                                                                                                                                                                                                    ; sum5~53, valor~78, moeda, valor[4], valor[2], sum50~reg0, sum100~reg0, valor~115                                                                                                                                                                                                                                                                                                                                                                                  ;
+;  D  ; LC51       ; clk, sig_m4, m4, sum25~38, sum5~48, sum50~reg0, sig_m5, m5, valor~80, sig_m3, m3                                                                                                                           ; sum5~40, sum50~reg0, sum50, sum5~80, sum5~83                                                                                                                                                                                                                                                                                                                                                                                                                      ;
+;  D  ; LC53       ; clk, sig_m2, m2, sum10~reg0, sum5~48, sum5~53, valor~79, valor~80                                                                                                                                          ; sum10~reg0, sum5~40, sum10, sum5~83                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  D  ; LC54       ; clk, m4                                                                                                                                                                                                    ; sum5~53, valor[3], moeda, valor~87, valor[1], sum50~reg0, sum100~41, valor~114                                                                                                                                                                                                                                                                                                                                                                                    ;
+;  D  ; LC58       ; clk, m3                                                                                                                                                                                                    ; valor~80, sum25~reg0, moeda, valor[2], valor[0], sum100~41, sum50~reg0, valor~112                                                                                                                                                                                                                                                                                                                                                                                 ;
+;  D  ; LC52       ; clk, m2                                                                                                                                                                                                    ; sum10~reg0, valor~77, sum25~38, moeda, valor[1], sum100~41, valor~116                                                                                                                                                                                                                                                                                                                                                                                             ;
++-----+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Fitter
+    Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Dec 06 22:48:06 2016
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off projetoFinal -c projetoFinal
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (119006): Selected device EPM3064ALC44-10 for design "projetoFinal"
+Info: Quartus II 32-bit Fitter was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 294 megabytes
+    Info: Processing ended: Tue Dec 06 22:48:07 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
